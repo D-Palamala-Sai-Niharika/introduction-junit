@@ -1,0 +1,64 @@
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class calculatorTest {
+	
+	private calculator calc=new calculator();
+	
+	@BeforeClass
+	public void beforeAllTestCases() {
+		System.out.println("executed only once before all test cases");
+	}
+	
+	@Before
+	public void beforeEveryTestCases() {
+		System.out.println("executed before all test cases");
+	}
+	
+	
+	@Test
+	public void addition() {
+		int result=calc.add(10, 5);
+		Assert.assertEquals(15, result);
+		System.out.println("executed test case");
+	}
+	
+	@Test
+	public void subtraction() {
+		int result=calc.substract(10, 5);
+		Assert.assertEquals(5, result);
+		System.out.println("executed test case");
+	}
+	
+	@Test
+	public void multiplication() {
+		int result=calc.multiply(10, 5);
+		Assert.assertEquals(50, result);
+		System.out.println("executed test case");
+	}
+	
+	@Test
+	public void division() {
+		int result=calc.divide(10, 5);
+		Assert.assertEquals(2, result);
+		System.out.println("executed test case");
+	}
+	
+	@After
+	public void aftereEveryTestCases() {
+		System.out.println("executed after every test cases");
+	}
+	
+	@AfterClass
+	public void afterAllTestCases() {
+		System.out.println("executed only once after all test cases");
+	}
+	
+	
+	
+	
+}
